@@ -14,6 +14,9 @@ export default function Home() {
 			<div className="">
 				<Header />
 			</div>
+			<div className=" flex bg-[#040714]  font-body items-center justify-center w-screen h-screen scrollbar-hide ">
+				<h1 className=" text-[#f9f9f9]">Hello</h1>
+			</div>
 		</div>
 	);
 }

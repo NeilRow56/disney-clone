@@ -6,6 +6,9 @@ import StarIcon from '@mui/icons-material/Star';
 import BlurCircularIcon from '@mui/icons-material/BlurCircular';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import MovieIcon from '@mui/icons-material/Movie';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
+import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import { useRouter } from 'next/router';
 
 function Header() {
@@ -13,10 +16,11 @@ function Header() {
 
 	let Links = [
 		{ name: 'Home', link: '/', icon: <HomeIcon /> },
-		{ name: 'Services', link: '/services', icon: <AddModeratorIcon /> },
-		{ name: 'About', link: '/about', icon: <StarIcon /> },
-		{ name: 'Login', link: '/login' },
-		{ name: 'Logout', link: '/logout' },
+		{ name: 'Search', link: '/search', icon: <SearchIcon /> },
+		{ name: 'Watchlist', link: '/watchlist', icon: <StarIcon /> },
+		{ name: 'Originals', link: '/originals', icon: <LiveTvIcon /> },
+		{ name: 'Movies', link: '/movies', icon: <MovieIcon /> },
+		{ name: 'Series', link: '/series', icon: <VideoLibraryIcon /> },
 	];
 
 	let [open, setOpen] = useState(false);
@@ -70,12 +74,15 @@ function Header() {
 									<div className="flex  pt-[2px]">
 										{' '}
 										{link.icon}
-									</div>
+									</div>{' '}
 									<div className="flex">{link.name}</div>
 								</div>
 							</a>
 						</li>
 					))}
+					<button className=" text-white md:ml-2 uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transition duration-200">
+						Login
+					</button>
 				</ul>
 			</div>
 		</div>
